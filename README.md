@@ -1,2 +1,3 @@
 # diario-de-estudos
-Minha evolução como dev
+Primeiro repositório e minha evolução como dev.
+
