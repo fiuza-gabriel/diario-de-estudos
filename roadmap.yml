@@ -1,0 +1,112 @@
+name: Roadmap Dev Júnior – 6 Meses
+on:
+  workflow_dispatch:
+
+jobs:
+  create_issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Criar issues semanais e diárias
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const roadmap = [
+              {
+                milestone: "Marco 1 – Fundamentos Python",
+                days: [
+                  {title: "Semana 1 – Dia 1 (19/10) – Git & README", tasks: ["Criar repositório diário de estudos", "Escrever README inicial"]},
+                  {title: "Semana 1 – Dia 2 (20/10) – Git básico", tasks: ["Revisar comandos Git", "Criar branch de testes"]},
+                  {title: "Semana 1 – Dia 3 (21/10) – Redes", tasks: ["Estudar IP, DNS, HTTP", "Resumo no README"]},
+                  {title: "Semana 1 – Dia 4 (22/10) – Python setup", tasks: ["Instalar Python + VSCode", "Hello World"]},
+                  {title: "Semana 1 – Dia 5 (23/10) – Variáveis", tasks: ["Exercícios de tipos", "Script soma"]},
+                  {title: "Semana 1 – Dia 6 (24/10) – Condicionais", tasks: ["Estudar if/else", "Calculadora básica"]},
+                  {title: "Semana 1 – Dia 7 (25/10) – Revisão", tasks: ["Revisão semanal", "Commit final"]}
+                ]
+              },
+              {
+                milestone: "Marco 1 – Python Essencial",
+                days: [
+                  {title: "Semana 2 – Dia 1 (26/10) – Listas/Tuplas", tasks: ["Exercícios com listas", "Exercícios com tuplas"]},
+                  {title: "Semana 2 – Dia 2 (27/10) – Dicionários/JSON", tasks: ["Manipular dicionários", "Salvar/ler JSON"]},
+                  {title: "Semana 2 – Dia 3 (28/10) – Funções", tasks: ["Criar funções simples", "Funções com parâmetros"]},
+                  {title: "Semana 2 – Dia 4 (29/10) – Módulos", tasks: ["Importar módulos", "Criar módulo próprio"]},
+                  {title: "Semana 2 – Dia 5 (30/10) – Projeto CLI", tasks: ["Desenvolver calculadora CLI"]},
+                  {title: "Semana 2 – Dia 6 (31/10) – CSV", tasks: ["Script leitor de CSV"]},
+                  {title: "Semana 2 – Dia 7 (01/11) – Revisão", tasks: ["Revisão semanal", "Commit final"]}
+                ]
+              },
+              {
+                milestone: "Marco 2 – Front-end + Banco + React",
+                days: [
+                  {title: "Semana 5 – Dia 1 – HTML básico", tasks: ["Criar página simples", "Commit inicial"]},
+                  {title: "Semana 5 – Dia 2 – CSS responsivo", tasks: ["Adicionar estilos", "Testar mobile"]},
+                  {title: "Semana 5 – Dia 3 – JS DOM", tasks: ["Manipular elementos", "Criar app CEP"]},
+                  {title: "Semana 5 – Dia 4 – SQL básico", tasks: ["Criar tabelas", "Inserir dados"]},
+                  {title: "Semana 5 – Dia 5 – Consultas SQL", tasks: ["SELECT simples", "JOIN básico"]},
+                  {title: "Semana 5 – Dia 6 – React setup", tasks: ["Instalar React", "Hello World"]},
+                  {title: "Semana 5 – Dia 7 – Revisão", tasks: ["Revisão semanal", "Commit final"]}
+                ]
+              },
+              {
+                milestone: "Marco 3 – Full stack + Deploy",
+                days: [
+                  {title: "Semana 9 – Dia 1 – React avançado", tasks: ["Hooks", "Context API"]},
+                  {title: "Semana 9 – Dia 2 – FastAPI setup", tasks: ["Criar API CRUD", "Testar endpoints"]},
+                  {title: "Semana 9 – Dia 3 – Integração front-back", tasks: ["Consumir API no React"]},
+                  {title: "Semana 9 – Dia 4 – Deploy inicial", tasks: ["Configurar servidor", "Publicar app"]},
+                  {title: "Semana 9 – Dia 5 – Testes básicos", tasks: ["Testar API", "Testar UI"]},
+                  {title: "Semana 9 – Dia 6 – Documentação", tasks: ["Atualizar README", "Escrever guia"]},
+                  {title: "Semana 9 – Dia 7 – Revisão", tasks: ["Revisão semanal", "Commit final"]}
+                ]
+              },
+              {
+                milestone: "Marco 4 – Full stack em Docker + lógica",
+                days: [
+                  {title: "Semana 13 – Dia 1 – Docker básico", tasks: ["Criar Dockerfile", "Rodar container"]},
+                  {title: "Semana 13 – Dia 2 – Docker Compose", tasks: ["Configurar serviços", "Testar integração"]},
+                  {title: "Semana 13 – Dia 3 – Git em equipe", tasks: ["Criar PR", "Revisar código"]},
+                  {title: "Semana 13 – Dia 4 – Estruturas de dados", tasks: ["Listas ligadas", "Pilhas"]},
+                  {title: "Semana 13 – Dia 5 – Exercícios lógica", tasks: ["Resolver 10 exercícios"]},
+                  {title: "Semana 13 – Dia 6 – Revisão lógica", tasks: ["Revisar conceitos", "Commit final"]},
+                  {title: "Semana 13 – Dia 7 – Revisão geral", tasks: ["Revisão semanal", "Commit final"]}
+                ]
+              },
+              {
+                milestone: "Marco 5 – Projeto real publicado",
+                days: [
+                  {title: "Semana 17 – Dia 1 – Planejamento", tasks: ["Definir escopo", "Criar backlog"]},
+                  {title: "Semana 17 – Dia 2 – Backend inicial", tasks: ["Criar API base", "Testar endpoints"]},
+                  {title: "Semana 17 – Dia 3 – Frontend inicial", tasks: ["Criar layout", "Consumir API"]},
+                  {title: "Semana 17 – Dia 4 – CI/CD setup", tasks: ["Configurar pipeline", "Testar build"]},
+                  {title: "Semana 17 – Dia 5 – Deploy nuvem", tasks: ["Configurar servidor", "Publicar app"]},
+                  {title: "Semana 17 – Dia 6 – Testes finais", tasks: ["Testar fluxo completo"]},
+                  {title: "Semana 17 – Dia 7 – Revisão", tasks: ["Revisão semanal", "Commit final"]}
+                ]
+              },
+              {
+                milestone: "Marco 6 – Empregabilidade",
+                days: [
+                  {title: "Semana 21 – Dia 1 – Portfólio", tasks: ["Atualizar projetos", "Publicar site"]},
+                  {title: "Semana 21 – Dia 2 – Currículo", tasks: ["Criar versão PDF", "Revisar conteúdo"]},
+                  {title: "Semana 21 – Dia 3 – LinkedIn", tasks: ["Atualizar perfil", "Adicionar projetos"]},
+                  {title: "Semana 21 – Dia 4 – Pitch", tasks: ["Gravar vídeo", "Revisar roteiro"]},
+                  {title: "Semana 21 – Dia 5 – Entrevistas simuladas", tasks: ["Resolver 2 desafios técnicos"]},
+                  {title: "Semana 21 – Dia 6 – Candidaturas", tasks: ["Enviar 10 candidaturas"]},
+                  {title: "Semana 21 – Dia 7 – Open Source", tasks: ["Criar PR em projeto público"]}
+                ]
+              }
+            ];
+
+            for (const week of roadmap) {
+              for (const day of week.days) {
+                const body = day.tasks.map(t => `- [ ] ${t}`).join("\n");
+                github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: day.title,
+                  body: body,
+                  labels: ["Roadmap", "Diário"],
+                  milestone: week.milestone
+                });
+              }
+            }
