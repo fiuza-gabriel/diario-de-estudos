@@ -17,7 +17,7 @@
 ## 📈 Progresso
 - **Semana 1:** Git básico, Markdown, criação do README de perfil  
 - **Semana 2:** HTML e CSS  
-- *Atualizo conforme evolução*
+- **Semana 3:** Fundamentos de Python 
 
 ---
 
