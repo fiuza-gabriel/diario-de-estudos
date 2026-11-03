@@ -28,4 +28,4 @@
 
 ---
 
-✨ *Esse repositório é meu diário de estudos e evolução rumo à carreira de Dev Junior.*
+ *Esse repositório é meu diário de estudos e evolução rumo à carreira de Dev Junior.*
